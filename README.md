@@ -1,4 +1,2 @@
-# MI-Data-Sensitivity
-This is the Github repository for the paper titled 'Investigating Demographic and Gender Bias in LLMs Using Mechanistic Interpretability'.
-Abstract:
-Large Language Models (LLMs) have been shown to exhibit various forms of bias (e.g., social, demographic, gender), which often stem from the data used for training. A considerable amount of research has been devoted to mitigate bias in these models. Some approaches focus on fine-tuning the models on different data, while others modify the objective of the model or alter the structure of the model to address bias. Due to the vast amount of data LLMs are trained on, correcting the data to remove bias can be challenging in certain cases. Changing the objective functions also requires retraining the model from scratch. In contrast to existing works, we investigate the underlying circuits responsible for bias in LLMs, specifically focusing on the edges contributing to it. Additionally, we evaluate the faithfulness and robustness of these identified components and explore whether removing them can effectively reduce bias in the LLM.
+Undergoing Restructuring Now!
+Thank you :)
