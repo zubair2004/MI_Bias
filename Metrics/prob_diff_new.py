@@ -1,0 +1,27 @@
+# trying a new metric as the sum of only probabilities of positive tokens
+def prob_diff_new(sentence, logits: torch.Tensor, loss=False, mean=False):
+    #Positive_Probs = torch.tensor(0, dtype=torch.float32, device='cuda')
+    Positive_Probs = 0
+    Negative_Probs = 0
+    k=10
+    probs = torch.softmax(logits[:,-1], dim=-1)
+    probs, next_tokens = torch.topk(probs[-1], k)
+    results = []
+    for i, (prob, token_id) in enumerate(zip(probs,next_tokens)):
+        token = model.tokenizer.decode(token_id.item())
+        predicted = sentence[0] + " " + token  # Append the predicted token to the current text
+        Senti_Scores = text_to_sentiment(predicted)
+        if Senti_Scores >= 0:
+          Positive_Probs += prob.sum()
+        else:
+          Negative_Probs += (prob-prob).sum()
+
+    results.append(Positive_Probs - Negative_Probs)
+    results = torch.stack(results)
+    if loss:
+        results = -results
+    if mean:
+        results = results.mean()
+    return results
+
+metric = prob_diff_new
