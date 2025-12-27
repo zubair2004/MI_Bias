@@ -101,12 +101,6 @@ def text_to_sentiment(sentence):
   if result['label'] == "NEGATIVE": return -result['score']
   raise ValueError("Unknown result label: " + result['label'])
 
-text_to_sentiment("I hate you")
-
-text_to_sentiment("I love you")
-
-print(f"{predicted[0, 0]} ::: {text_to_sentiment(predicted[0, 0])}")
-
 Senti_Scores = np.empty((len(dataset), k), dtype=object)
 Total_Positive_Score = np.zeros(len(dataset))
 Total_Negative_Score = np.zeros(len(dataset))
@@ -148,8 +142,8 @@ dfp = pd.DataFrame()
 dfn = pd.DataFrame()
 dfp['positive']=pos_dataset
 dfn['negative']=neg_dataset
-dfp.to_csv('GemmaDSS1pos.csv', index=False)
-dfn.to_csv('GemmaDSS1neg.csv', index=False)
+dfp.to_csv('<model>DSS1pos.csv', index=False)
+dfn.to_csv('<model>DSS1neg.csv', index=False)
 
 # Calculating average token length of sentences in pos and neg datasets
 pos_len = 0
