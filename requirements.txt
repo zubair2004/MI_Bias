@@ -1,0 +1,18 @@
+git clone https://github.com/hannamw/EAP-positional.git
+pip install plotly
+pip install datasets
+pip install jaxtyping
+pip install better_abc
+pip install fancy_einsum
+pip install wandb
+pip install einops==0.7.0
+pip install sentencepiece
+pip install tf-keras
+pip install transformer-lens==2.16.1
+pip install pytest
+pip install datasets transformers huggingface_hub
+apt-get install -y git-lfs 
+sudo apt-get install -y python3-dev graphviz libgraphviz-dev pkg-config
+pip install pygraphviz
+pip install plotly
+wget https://raw.githubusercontent.com/zubair2004/Finding_Nationality-and-Gender-Bias-Circuits-in-LLMs./main/Nationalities.csv
