@@ -1,9 +1,12 @@
 git clone https://github.com/hannamw/EAP-positional.git
+git clone https://github.com/zubair2004/MI_Bias.git
 pip install plotly
 pip install datasets
 pip install jaxtyping
 pip install better_abc
 pip install fancy_einsum
+pip install matplotlib
+pip install IPython
 pip install wandb
 pip install einops==0.7.0
 pip install sentencepiece
@@ -15,4 +18,4 @@ apt-get install -y git-lfs
 sudo apt-get install -y python3-dev graphviz libgraphviz-dev pkg-config
 pip install pygraphviz
 pip install plotly
-wget https://raw.githubusercontent.com/zubair2004/Finding_Nationality-and-Gender-Bias-Circuits-in-LLMs./main/Nationalities.csv
+wget https://raw.githubusercontent.com/zubair2004/MI_Bias/refs/heads/main/Dataset/
