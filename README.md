@@ -1,13 +1,10 @@
-Here’s a cleaner, more professional rewrite of your `README.md`, with better structure, clarity, and GitHub-friendly formatting:
-
 ---
 
-# Dissecting Bias in LLMs — Mechanistic Interpretability
+# Dissecting Bias in LLMs: A Mechanistic Interpretability Perspective
 
 🚧 **Note:** This repository is currently undergoing restructuring. Some components may change. Thanks for your patience!
 
-This repository contains the codebase accompanying the paper **“Dissecting Bias in LLMs: A Mechanistic Interpretability Perspective”**, which investigates demographic bias in large language models using edge attribution methods.
-
+This repository contains the codebase accompanying the paper **“Dissecting Bias in LLMs: A Mechanistic Interpretability Perspective”**, which investigates Demographic and Gender Bias in large language models.
 ---
 
 ## 📦 Installation
