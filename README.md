@@ -10,18 +10,22 @@ This repository contains the codebase accompanying the paper **“Dissecting Bia
 
 ## 📦 Installation
 
-### 1. Clone the Repository
+### 1. Clone this Repository
 
-### 2. Install System Dependencies
+### 2. Now Clone this Repository for EAP
 
 ```bash
 git clone https://github.com/hannamw/EAP-positional.git
-cd EAP-positional
+```
+
+### 3. Install System Dependencies
+
+```bash
 sudo apt-get install -y git-lfs
 sudo apt-get install -y python3-dev graphviz libgraphviz-dev pkg-config
 ```
 
-### 3. Install Python Requirements
+### 4. Install Python Requirements
 
 ```bash
 pip install -r requirements.txt
