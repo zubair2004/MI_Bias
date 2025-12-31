@@ -14,7 +14,7 @@ Undergoing Restructuring at the moment! Thank you :)
 
 4. Run for preliminary Bias analysis:
 
-   python main.py <sen> <model_name> <metric> --HF_token <HF_token>
+   python main.py <sen> <model_name> --HF_token <HF_token>
    
 5. Run for Edge Attribution:
 
