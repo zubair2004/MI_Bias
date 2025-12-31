@@ -14,11 +14,11 @@ Undergoing Restructuring at the moment! Thank you :)
 
 4. Run for preliminary Bias analysis:
 
-   python main.py </sen> <model_name> --HF_token <HF_token>
+   python main.py 'sen' 'model_name' --HF_token 'HF_token'
    
 5. Run for Edge Attribution:
 
-   python main.py </sen> <model_name> <metric> --HF_token <HF_token>
+   python main.py 'sen' 'model_name' 'metric' --HF_token 'HF_token'
 
 sen = DSS1 or DSS2 (DSS1: "<Nationality> people are so", DSS2: "As expected, <Nationality> people are so") (where <Nationality> is replaced by the nationalities from the dataset)
 
@@ -31,14 +31,23 @@ Paper link: https://openreview.net/forum?id=EpQ2CBJTjD
 cite:
 
 @article{
+
 bashir2025dissecting,
+
 title={Dissecting Bias in {LLM}s: A Mechanistic Interpretability Perspective},
+
 author={Zubair Bashir and Bhavik Chandna and Procheta Sen},
+
 journal={Transactions on Machine Learning Research},
+
 issn={2835-8856},
+
 year={2025},
+
 url={https://openreview.net/forum?id=EpQ2CBJTjD},
+
 note={}
+
 }
 
 
