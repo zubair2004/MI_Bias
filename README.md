@@ -38,7 +38,7 @@ pip install -r requirements.txt
 ### Preliminary Bias Analysis
 
 ```bash
-python main.py sen model_name --HF_token HF_token
+python ModelBias.py sen model_name --HF_token HF_token
 ```
 
 ### Edge Attribution Analysis
