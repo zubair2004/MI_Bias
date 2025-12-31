@@ -69,6 +69,7 @@ Supported models:
 * `llama2-7B`
 * `Gemma`
 * `Qwen`
+* `All models supported on Transformerlens`
 
 ### `metric`
 
