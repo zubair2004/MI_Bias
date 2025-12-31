@@ -38,13 +38,13 @@ pip install -r requirements.txt
 ### Preliminary Bias Analysis
 
 ```bash
-python ModelBias.py sen model_name --HF_token HF_token
+python Bias_Code/Demographic_Bias/ModelBias.py sen model_name --HF_token HF_token
 ```
 
 ### Edge Attribution Analysis
 
 ```bash
-python main.py sen model_name metric --HF_token HF_token
+python Bias_Code/Demographic_Bias/main.py sen model_name metric --HF_token HF_token
 ```
 
 ---
