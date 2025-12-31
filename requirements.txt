@@ -1,0 +1,17 @@
+plotly
+datasets
+jaxtyping
+better_abc
+fancy_einsum
+matplotlib
+IPython
+wandb
+einops==0.7.0
+sentencepiece
+tf-keras
+transformer-lens==2.16.1
+pytest
+datasets
+transformers
+huggingface_hub
+pygraphviz
