@@ -2,7 +2,7 @@ Undergoing Restructuring at the moment! Thank you :)
 
 1. Clone this repo.
    
-2. Run:
+2. Run in terminal:
    
    git clone https://github.com/hannamw/EAP-positional.git
 
