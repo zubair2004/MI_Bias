@@ -14,11 +14,11 @@ Undergoing Restructuring at the moment! Thank you :)
 
 4. Run for preliminary Bias analysis:
 
-   python main.py <sen> <model_name> --HF_token <HF_token>
+   python main.py </sen> <model_name> --HF_token <HF_token>
    
 5. Run for Edge Attribution:
 
-   python main.py <sen> <model_name> <metric> --HF_token <HF_token>
+   python main.py </sen> <model_name> <metric> --HF_token <HF_token>
 
 sen = DSS1 or DSS2 (DSS1: "<Nationality> people are so", DSS2: "As expected, <Nationality> people are so") (where <Nationality> is replaced by the nationalities from the dataset)
 
