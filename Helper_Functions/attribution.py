@@ -87,9 +87,8 @@ def make_hooks_and_matrices(model: HookedTransformer, graph: Graph, batch_size:i
 
     return (fwd_hooks_corrupted, fwd_hooks_clean, bwd_hooks), activation_difference
 
-######                #######
-#####  Edit from here  #######
-#####                 #######
+# Edge Attribution Patching (EAP) implementation
+# Based on Syed et al. (2024)
 
 def get_scores(model: HookedTransformer, graph: Graph, dataset, metric: Callable[[Tensor], Tensor]):
     scores = torch.zeros((graph.n_forward, graph.n_backward), device=device, dtype=model.cfg.dtype)
@@ -116,8 +115,7 @@ def get_scores(model: HookedTransformer, graph: Graph, dataset, metric: Callable
 
         with model.hooks(fwd_hooks=fwd_hooks_clean, bwd_hooks=bwd_hooks):
             logits = model(clean)
-            label = torch.tensor(0, device=device, dtype=model.cfg.dtype)
-            metric_value = metric(sentence,logits)
+            metric_value = metric(sentence, logits)
             metric_value.backward()
 
     scores /= total_items
@@ -167,8 +165,7 @@ def get_scores_ig(model: HookedTransformer, graph: Graph, dataset, metric: Calla
             total_steps += 1
             with model.hooks(fwd_hooks=[(graph.nodes['input'].out_hook, input_interpolation_hook(step))], bwd_hooks=bwd_hooks):
                 logits = model(clean)
-                label = torch.tensor(0, device=device, dtype=model.cfg.dtype)
-                metric_value = metric(sentence,logits)
+                metric_value = metric(sentence, logits)
                 metric_value.backward()
 
     scores /= total_items
