@@ -11,6 +11,7 @@ This codebase provides a unified framework for:
 - **Dataset Creation**: Generating bias datasets with configurable sentence templates and corruption strategies
 - **Circuit Discovery**: Identifying bias-related circuits using Edge Attribution Patching (EAP)
 - **Stability Analysis**: Analyzing edge stability across grammatical structures and bias types
+- **Fine-tuning Experiments**: Investigating how bias circuits change when models are fine-tuned on different datasets
 - **Visualization**: Generating layer-wise distributions, ablation plots, and overlap matrices
 
 ---
@@ -278,9 +279,40 @@ Directory to save generated datasets, statistics, and analysis results (default:
 * `{model}_{bias_type}_{sen}_{metric}_ablation.png`: Ablation analysis showing metric drop vs. edges ablated
 * `{model}_{bias_type}_{sen}_{metric}_ablation_data.txt`: Numerical data for ablation analysis
 
+### Fine-tuning Experiment Outputs
+
+* `{model}_{bias_type}_{sen}_{metric}_finetuned_comparison.txt`: Comparison report between pretrained and fine-tuned circuits
+* `{model}_{bias_type}_{sen}_{metric}_finetuned_comparison.png`: Visualization of edge overlap between pretrained and fine-tuned models
+* Fine-tuned model directories containing model weights and tokenizer files
+
 ---
 
-## 📄 Paper
+## 🔬 Fine-tuning Experiments
+
+This repository includes experiments to investigate whether important edges (circuit components) change when models are fine-tuned on different types of data. See the [`FineTuning/`](FineTuning/) directory for detailed documentation.
+
+### Quick Start: Fine-tuning Experiments
+
+```bash
+# Run complete fine-tuning experiment pipeline
+export BASE_MODEL="gpt2-large"
+export BIAS_TYPE="demographic"  # or "gender"
+export SEN="DSS1"  # GSS1, GSS2, DSS1, or DSS2
+export METRIC="M2"  # M1 or M2
+export HF_TOKEN="your_token_here"  # Optional
+
+bash FineTuning/run_finetuning_experiments.sh
+```
+
+### Experiment Types
+
+1. **Positive Bias Fine-tuning**: Fine-tune models on datasets where positive things are said about countries/professions that previously showed negative bias. This debiasing fine-tuning checks whether important edges for generating sentences of the same grammatical structure change.
+
+2. **Shakespeare Fine-tuning**: Fine-tune models on Shakespeare text that has no overlap with bias-related sentences. The bias doesn't change after this, but we check whether the structures important for bias remain the same.
+
+For detailed usage instructions, see [`FineTuning/README.md`](FineTuning/README.md).
+
+---
 
 **Dissecting Bias in LLMs: A Mechanistic Interpretability Perspective**
 📎 [https://openreview.net/forum?id=EpQ2CBJTjD](https://openreview.net/forum?id=EpQ2CBJTjD)
